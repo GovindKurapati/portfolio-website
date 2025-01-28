@@ -1,3 +1,4 @@
+"use server";
 import IconWrapper from "@/components/IconWrapper";
 import { Flex, Heading, Text, Icon, Box, Link, Image } from "@chakra-ui/react";
 import {
