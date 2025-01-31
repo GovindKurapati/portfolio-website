@@ -65,9 +65,9 @@ export const Header = () => {
         <NavLink href="/portfolio" isActive={isActive("/portfolio")}>
           Portfolio
         </NavLink>
-        <NavLink href="/blog" isActive={isActive("/blog")}>
+        {/* <NavLink href="/blog" isActive={isActive("/blog")}>
           Blog
-        </NavLink>
+        </NavLink> */}
         <NavLink href="/gallery" isActive={isActive("/gallery")}>
           Gallery
         </NavLink>

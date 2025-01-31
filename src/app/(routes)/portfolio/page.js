@@ -1,10 +1,45 @@
-import { Flex, Text, Heading, Box, VStack, Icon, Link } from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Heading,
+  Box,
+  VStack,
+  Icon,
+  Link,
+  Grid,
+} from "@chakra-ui/react";
 
 import { BsBriefcase } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsCalendar3 } from "react-icons/bs";
+import { Card } from "@/components/card";
 
-export default function Portfolio() {
+export default async function Portfolio({ searchParams }) {
+  const PORTFOLIO_DATA = [
+    {
+      id: 1,
+      title: "Personal Website",
+      tag: "Development",
+      linkUrl: "https://www.google.com",
+      imageUrl: "personal-website.png",
+    },
+    {
+      id: 2,
+      title: "Old Personal Website",
+      tag: "Design",
+      linkUrl: "https://www.apple.com",
+      imageUrl: "old-website-design.png",
+    },
+    {
+      id: 2,
+      title: "ScarletHacks2025 IITC Hackathon",
+      tag: "Design",
+      linkUrl: "https://www.apple.com",
+      imageUrl: "scarlet-hacks-design.png",
+    },
+  ];
+
+  const { filter = "all" } = await searchParams;
   return (
     <Flex w="100%" direction={"column"} position={"relative"}>
       <Heading
@@ -23,6 +58,46 @@ export default function Portfolio() {
       >
         Portfolio
       </Heading>
+
+      <Flex gap={4} my="20px">
+        {/* <p>{searchParams.filter}</p> */}
+
+        <Link href="/portfolio?filter=all">
+          <Text color={filter == "all" ? "tertiary" : ""} fontSize={"lg"}>
+            All
+          </Text>
+        </Link>
+        <Link href="/portfolio?filter=Design">
+          <Text color={filter == "Design" ? "tertiary" : ""} fontSize={"lg"}>
+            Design
+          </Text>
+        </Link>
+        <Link href="/portfolio?filter=Development">
+          <Text
+            color={filter == "Development" ? "tertiary" : ""}
+            fontSize={"lg"}
+          >
+            Development
+          </Text>
+        </Link>
+      </Flex>
+      <Grid
+        gridTemplateColumns={{ base: "1fr", md: "1fr 1fr" }}
+        gap={"30px"}
+        my={"10px"}
+      >
+        {PORTFOLIO_DATA.map((item) =>
+          item.tag == filter || filter == "all" || filter == "" ? (
+            <Card
+              key={item.id}
+              imageUrl={item.imageUrl}
+              title={item.title}
+              tag={item.tag}
+              linkUrl={item.linkUrl}
+            />
+          ) : null
+        )}
+      </Grid>
     </Flex>
   );
 }

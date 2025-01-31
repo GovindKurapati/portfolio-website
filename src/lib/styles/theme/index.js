@@ -4,6 +4,12 @@ import { createSystem, defaultConfig } from "@chakra-ui/react";
 
 const customTheme = createSystem(defaultConfig, {
   theme: {
+    keyframes: {
+      shakeX: {
+        "0%": { transform: "scale(1)" },
+        "100%": { transform: "scale(1.1)" },
+      },
+    },
     tokens: {
       colors: {
         primary: { value: "#1e1e1f" },
@@ -17,6 +23,9 @@ const customTheme = createSystem(defaultConfig, {
         red: {
           100: { value: "#fff1f0" },
         },
+      },
+      animations: {
+        shakeX: { value: "shakeX 0.6s ease forwards" },
       },
     },
   },

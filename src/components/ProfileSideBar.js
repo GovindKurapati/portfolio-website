@@ -35,12 +35,12 @@ export const ProfileSideBar = () => {
           justifyContent={"center"}
         >
           <Image
-            src="/profile-pic1_enhanced.png"
-            width="110px"
-            height="110px"
+            src="/profile-pic.jpg"
+            width="150px"
+            height="150px"
             borderRadius="30px"
             alt="Govind Kurapati"
-            objectFit={"contain"}
+            objectFit={"cover"}
           />
         </Flex>
         <Flex
