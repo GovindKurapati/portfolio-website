@@ -2,6 +2,7 @@ import { Provider } from "@/components/provider";
 import { ProfileSideBar } from "@/components/ProfileSideBar";
 import { Flex, Box } from "@chakra-ui/react";
 import { Header } from "@/components/header";
+import { NavBar } from "@/components/NavBar";
 
 export const metadata = {
   title: "Govind Kurapati",
@@ -50,6 +51,7 @@ const RootLayout = ({ children }) => {
 
               {children}
             </Flex>
+            <NavBar />
           </Flex>
         </Provider>
       </body>
