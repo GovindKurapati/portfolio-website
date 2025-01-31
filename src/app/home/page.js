@@ -26,7 +26,7 @@ import {
   SiPython,
   SiDotnet,
 } from "react-icons/si";
-import { FaAws, FaJava, FaPlay } from "react-icons/fa";
+import { FaAws, FaGithub, FaJava, FaPlay } from "react-icons/fa";
 
 // Utility function to lighten colors
 const lightenColor = (color, amount = 0.15) => {
@@ -223,6 +223,8 @@ export async function Home() {
     { icon: <FaAws />, name: "AWS", iconColor: "#ff9c15" },
     { icon: <SiChakraui />, name: "ChakraUI", iconColor: "#51cac5" },
     { icon: <SiGit />, name: "Git", iconColor: "#f1563b" },
+    { icon: <FaGithub />, name: "GitHub", iconColor: "#383737" },
+
     // {
     //   icon: <SiMaterialdesign />,
     //   name: "Material Design",

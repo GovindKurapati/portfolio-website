@@ -1,4 +1,4 @@
-import { Flex, VStack, Text, Link, Icon } from "@chakra-ui/react";
+import { Flex, VStack, Text, Link, Icon, Grid } from "@chakra-ui/react";
 import { FiGithub } from "react-icons/fi";
 import { LuExternalLink } from "react-icons/lu";
 import { LuMail } from "react-icons/lu";
@@ -7,8 +7,13 @@ import { LuMapPin } from "react-icons/lu";
 
 export const ContactInfo = () => {
   return (
-    <Flex
-      direction={{ base: "row", xl: "column" }}
+    <Grid
+      gridTemplateColumns={{
+        base: "1fr",
+        md: "1fr 1fr",
+        lg: "1fr 1fr",
+        xl: "1fr",
+      }}
       gap="30px"
       maxWidth={"max-content"}
       flexWrap={"wrap"}
@@ -196,6 +201,6 @@ export const ContactInfo = () => {
           </VStack>
         </Flex>
       </Link>
-    </Flex>
+    </Grid>
   );
 };

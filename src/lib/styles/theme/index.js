@@ -29,6 +29,16 @@ const customTheme = createSystem(defaultConfig, {
       },
     },
   },
+  globalCss: {
+    "::-moz-selection": {
+      backgroundColor: "tertiary", // ✅ Apply selection background
+      color: "black", // ✅ Apply selection text color
+    },
+    "::selection": {
+      backgroundColor: "tertiary",
+      color: "black",
+    },
+  },
 });
 
 export default customTheme;
