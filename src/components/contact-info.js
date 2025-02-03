@@ -100,7 +100,7 @@ export const ContactInfo = () => {
               Email
             </Text>
 
-            <Text overflow={"hidden"} fontSize={"16px"}>
+            <Text color={"title.100"} overflow={"hidden"} fontSize={"16px"}>
               kgovindrarg@gmail.com
             </Text>
           </VStack>
@@ -145,7 +145,9 @@ export const ContactInfo = () => {
             >
               LinkedIn
             </Text>
-            <Text fontSize={"16px"}>Govind Kurapati</Text>
+            <Text color={"title.100"} fontSize={"16px"}>
+              Govind Kurapati
+            </Text>
           </VStack>
         </Flex>
       </Link>
@@ -189,7 +191,9 @@ export const ContactInfo = () => {
             >
               GitHub
             </Text>
-            <Text fontSize={"16px"}>GovindKurapati</Text>
+            <Text color={"title.100"} fontSize={"16px"}>
+              GovindKurapati
+            </Text>
             {/* <LuExternalLink /> */}
 
             {/* <Icon

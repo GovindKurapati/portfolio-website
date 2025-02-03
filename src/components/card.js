@@ -30,7 +30,7 @@ export const Card = ({
           align="center"
           maxHeight={"250px"}
           overflow="hidden"
-          borderRadius="30px"
+          borderRadius="20px"
           direction={"column"}
         >
           <Image
@@ -54,6 +54,7 @@ export const Card = ({
             }}
             fontWeight={"600"}
             fontSize={"lg"}
+            color={"title.100"}
           >
             {title}
           </Text>

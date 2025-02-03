@@ -62,6 +62,8 @@ export const ProfileSideBar = () => {
         variant={"outline"}
         color={"tertiary"}
         onClick={toggleContactInfo}
+        borderColor={"tertiary"}
+        _hover={{ bg: "tertiary", color: "primary" }}
       >
         <Flex display={{ base: "block", sm: "block", md: "none" }}>
           <FaChevronDown />
@@ -88,7 +90,7 @@ export const ProfileSideBar = () => {
             src="/profile-pic.jpg"
             width={{ base: "100px", sm: "150px" }}
             height={{ base: "100px", sm: "150px" }}
-            borderRadius="30px"
+            borderRadius="20px"
             alt="Govind Kurapati"
             objectFit={"cover"}
           />
@@ -131,6 +133,8 @@ export const ProfileSideBar = () => {
               }}
               variant={"outline"}
               color={"tertiary"}
+              borderColor={"tertiary"}
+              _hover={{ bg: "tertiary", color: "primary" }}
             >
               <LuFile />
               Resume
@@ -140,7 +144,13 @@ export const ProfileSideBar = () => {
       </Flex>
 
       {toggleContactInfoSection && (
-        <Separator margin={"30px"} colorPalette={"#383838"} size={"md"} />
+        // <Separator margin={"30px"} colorPalette={"#d6d6d6"} size={"xs"} />
+        <Box
+          backgroundColor={"borderColor"}
+          margin={"30px"}
+          height={"1px"}
+          w={"100%"}
+        />
       )}
 
       {toggleContactInfoSection && <ContactInfo />}

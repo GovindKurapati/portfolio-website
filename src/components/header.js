@@ -32,7 +32,7 @@ export const Header = () => {
   const pathname = usePathname();
 
   const isActive = (path) => {
-    console.log("from is active", path);
+    // console.log("from is active", path);
     return pathname === path;
   };
 

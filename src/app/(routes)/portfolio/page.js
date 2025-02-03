@@ -20,18 +20,19 @@ export default async function Portfolio({ searchParams }) {
       id: 1,
       title: "Personal Website",
       tag: "Development",
-      linkUrl: "https://www.google.com",
+      linkUrl: "https://govind-kurapati.vercel.app",
       imageUrl: "personal-website.png",
     },
     {
       id: 2,
       title: "Old Personal Website",
       tag: "Design",
-      linkUrl: "https://www.apple.com",
+      linkUrl:
+        "https://www.figma.com/design/RhApXpafsdkHZOQ737Wbnq/Portfolio---GK?node-id=0-1&p=f",
       imageUrl: "old-website-design.png",
     },
     {
-      id: 2,
+      id: 3,
       title: "ScarletHacks2025 IITC Hackathon",
       tag: "Design",
       linkUrl: "https://www.apple.com",
@@ -63,18 +64,24 @@ export default async function Portfolio({ searchParams }) {
         {/* <p>{searchParams.filter}</p> */}
 
         <Link href="/portfolio?filter=all">
-          <Text color={filter == "all" ? "tertiary" : ""} fontSize={"lg"}>
+          <Text
+            color={filter == "all" ? "tertiary" : "title.100"}
+            fontSize={"lg"}
+          >
             All
           </Text>
         </Link>
         <Link href="/portfolio?filter=Design">
-          <Text color={filter == "Design" ? "tertiary" : ""} fontSize={"lg"}>
+          <Text
+            color={filter == "Design" ? "tertiary" : "title.100"}
+            fontSize={"lg"}
+          >
             Design
           </Text>
         </Link>
         <Link href="/portfolio?filter=Development">
           <Text
-            color={filter == "Development" ? "tertiary" : ""}
+            color={filter == "Development" ? "tertiary" : "title.100"}
             fontSize={"lg"}
           >
             Development
