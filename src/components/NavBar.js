@@ -23,18 +23,18 @@ export const NavBar = () => {
       alignItems={"center"}
       w="100%"
       zIndex={10}
-      bg="hsla(240, 9.10%, 63.30%, 0.75)"
-      backdropFilter="blur(20px)"
+      bg="secondary"
+      backdropFilter="blur(10px)"
       border="1px solid var(--jet)"
       borderRadius="12px 12px 0 0"
-      boxShadow="var(--shadow-2)"
+      boxShadow="var(--shadow-4)"
       display={{ base: "flex", lg: "none" }}
     >
       {navItems.map((item) => (
         <Link key={item.path} href={item.path}>
           <Text
-            color={pathname == item.path ? "tertiary" : "white"}
-            fontWeight={"500"}
+            color={pathname == item.path ? "tertiary" : "title.100"}
+            fontWeight={"700"}
           >
             {item.label}
           </Text>
