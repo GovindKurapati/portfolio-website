@@ -63,7 +63,7 @@ export default async function Portfolio({ searchParams }) {
       <Flex gap={4} my="20px">
         {/* <p>{searchParams.filter}</p> */}
 
-        <Link href="/portfolio?filter=all">
+        <Link href="/portfolio?filter=all" outline={"none"}>
           <Text
             color={filter == "all" ? "tertiary" : "title.100"}
             fontSize={"lg"}
@@ -71,7 +71,7 @@ export default async function Portfolio({ searchParams }) {
             All
           </Text>
         </Link>
-        <Link href="/portfolio?filter=Design">
+        <Link href="/portfolio?filter=Design" outline={"none"}>
           <Text
             color={filter == "Design" ? "tertiary" : "title.100"}
             fontSize={"lg"}
@@ -79,7 +79,7 @@ export default async function Portfolio({ searchParams }) {
             Design
           </Text>
         </Link>
-        <Link href="/portfolio?filter=Development">
+        <Link href="/portfolio?filter=Development" outline={"none"}>
           <Text
             color={filter == "Development" ? "tertiary" : "title.100"}
             fontSize={"lg"}

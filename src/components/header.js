@@ -12,7 +12,7 @@ const NavLink = ({ children, href, isActive }) => {
       px={4}
       py={2}
       rounded="md"
-      color={isActive ? "tertiary" : "gray.300"}
+      color={isActive ? "tertiary" : "title.300"}
       _hover={{
         textDecoration: "none",
         color: "tertiary",
@@ -52,9 +52,9 @@ export const Header = () => {
       borderRadius={"0px 20px 0px 20px"}
       display={{ base: "none", lg: "flex" }}
     >
-      {/* <Box marginLeft="auto">
+      <Box marginLeft="auto">
         <ColorModeButton />
-      </Box> */}
+      </Box>
       <Flex gap={4} borderRadius={"0px 20px 0px 20px"}>
         <NavLink href="/" isActive={isActive("/")}>
           About

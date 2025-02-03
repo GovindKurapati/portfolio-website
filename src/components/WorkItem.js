@@ -80,7 +80,9 @@ export const WorkItem = ({ title, icon, data }) => {
                             <List.Indicator asChild size="6px">
                               <FaCircle />
                             </List.Indicator>
-                            <Text display="inline">{activity}</Text>
+                            <Text color={"title.100"} display="inline">
+                              {activity}
+                            </Text>
                           </List.Item>
                         );
                       })}

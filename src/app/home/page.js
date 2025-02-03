@@ -254,7 +254,7 @@ export async function Home() {
       <Text>
         I’m a passionate computer science graduate student at{" "}
         <Link href="https://www.iit.edu/" target={"_blank"} outline={"none"}>
-          <Text as="span" color={"tertiary"}>
+          <Text as="span" color={"tertiary"} fontWeight={"500"}>
             Illinois Institute of Technology
           </Text>
         </Link>{" "}

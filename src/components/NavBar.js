@@ -33,7 +33,7 @@ export const NavBar = () => {
       {navItems.map((item) => (
         <Link key={item.path} href={item.path}>
           <Text
-            color={pathname == item.path ? "tertiary" : ""}
+            color={pathname == item.path ? "tertiary" : "title.100"}
             fontWeight={"700"}
           >
             {item.label}

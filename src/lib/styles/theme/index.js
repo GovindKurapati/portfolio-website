@@ -22,31 +22,22 @@ const customTheme = createSystem(defaultConfig, {
         // borderColor: { value: "#383838" },
         primary: {
           DEFAULT: {
-            value: { _light: "#1e1e1f", _dark: "#1e1e1f" }, // Custom dark background
-          },
-          subtle: {
-            value: { _light: "#2B2B2C", _dark: "#2B2B2C" }, // Custom dark subtle background
-          },
-          muted: {
-            value: { _light: "{colors.gray.100}", _dark: "#262626" }, // Custom dark muted background
+            value: { _light: "#F1F2F4", _dark: "#1e1e1f" }, // Custom dark background
           },
         },
         secondary: {
           DEFAULT: {
-            value: { _light: "#2B2B2C", _dark: "#2B2B2C" }, // Custom dark text color
-          },
-          muted: {
-            value: { _light: "{colors.gray.600}", _dark: "#a3a3a3" }, // Custom dark muted text
+            value: { _light: "#DCDFE4", _dark: "#2B2B2C" }, // Custom dark text color
           },
         },
         tertiary: {
           DEFAULT: {
-            value: { _light: "#ffdb70", _dark: "#ffdb70" }, // Custom dark border
+            value: { _light: "#3767D6", _dark: "#F5CD47" }, // Custom dark border
           },
         },
         title: {
           100: {
-            value: { _light: "#d6d6d6", _dark: "#d6d6d6" }, // Custom dark title
+            value: { _light: "black", _dark: "#d6d6d6" }, // Custom dark title
           },
           200: {
             value: { _light: "#d6d6d6b3", _dark: "#d6d6d6b3" }, // Custom dark title
@@ -54,7 +45,12 @@ const customTheme = createSystem(defaultConfig, {
         },
         borderColor: {
           DEFAULT: {
-            value: { _light: "#383838", _dark: "#383838" }, // Custom dark border
+            value: { _light: "#B3B9C4", _dark: "#383838" }, // Custom dark border
+          },
+        },
+        backgroundColor: {
+          DEFAULT: {
+            value: { _light: "#F7F8F9", _dark: "#121212" }, // Custom dark background
           },
         },
       },
@@ -74,8 +70,8 @@ const customTheme = createSystem(defaultConfig, {
     },
     html: {
       color: "title.100",
-      bg: "#121212",
       overflowX: "hidden",
+      backgroundColor: "backgroundColor",
     },
     body: {
       overflowX: "hidden",
