@@ -23,8 +23,8 @@ export const NavBar = () => {
       alignItems={"center"}
       w="100%"
       zIndex={10}
-      bg="hsla(240, 1%, 17%, 0.75)"
-      backdropFilter="blur(10px)"
+      bg="hsla(240, 9.10%, 63.30%, 0.75)"
+      backdropFilter="blur(20px)"
       border="1px solid var(--jet)"
       borderRadius="12px 12px 0 0"
       boxShadow="var(--shadow-2)"
@@ -33,8 +33,8 @@ export const NavBar = () => {
       {navItems.map((item) => (
         <Link key={item.path} href={item.path}>
           <Text
-            color={pathname == item.path ? "tertiary" : "title.100"}
-            fontWeight={"700"}
+            color={pathname == item.path ? "tertiary" : "white"}
+            fontWeight={"500"}
           >
             {item.label}
           </Text>
