@@ -59,6 +59,7 @@ export const ContactInfo = () => {
       <Link
         href="mailto:kgovindrarg@gmail.com"
         _hover={{ textDecoration: "none" }}
+        className="group"
       >
         <Flex gap={"16px"}>
           <Flex
@@ -81,6 +82,12 @@ export const ContactInfo = () => {
               borderRadius: "inherit",
               background:
                 "linear-gradient(145deg, rgba(255,255,255,0.05) 0%, transparent 100%)",
+            }}
+            _groupHover={{
+              _before: {
+                background:
+                  "linear-gradient(145deg, rgba(255,255,255,0.15) 0%, transparent 100%)",
+              },
             }}
           >
             <LuMail size={"18px"} />
@@ -100,7 +107,12 @@ export const ContactInfo = () => {
               Email
             </Text>
 
-            <Text color={"title.100"} overflow={"hidden"} fontSize={"16px"}>
+            <Text
+              color={"title.100"}
+              overflow={"hidden"}
+              fontSize={"16px"}
+              _groupHover={{ color: "tertiary" }}
+            >
               kgovindrarg@gmail.com
             </Text>
           </VStack>
@@ -110,6 +122,7 @@ export const ContactInfo = () => {
         href="https://www.linkedin.com/in/govind-kurapati"
         _hover={{ textDecoration: "none" }}
         target="_blank"
+        className="group"
       >
         <Flex gap={"16px"}>
           <Flex
@@ -133,6 +146,12 @@ export const ContactInfo = () => {
               background:
                 "linear-gradient(145deg, rgba(255,255,255,0.05) 0%, transparent 100%)",
             }}
+            _groupHover={{
+              _before: {
+                background:
+                  "linear-gradient(145deg, rgba(255,255,255,0.15) 0%, transparent 100%)",
+              },
+            }}
           >
             <LuLinkedin size={"18px"} />
           </Flex>
@@ -145,7 +164,11 @@ export const ContactInfo = () => {
             >
               LinkedIn
             </Text>
-            <Text color={"title.100"} fontSize={"16px"}>
+            <Text
+              color={"title.100"}
+              fontSize={"16px"}
+              _groupHover={{ color: "tertiary" }}
+            >
               Govind Kurapati
             </Text>
           </VStack>
@@ -179,6 +202,12 @@ export const ContactInfo = () => {
               background:
                 "linear-gradient(145deg, rgba(255,255,255,0.05) 0%, transparent 100%)",
             }}
+            _groupHover={{
+              _before: {
+                background:
+                  "linear-gradient(145deg, rgba(255,255,255,0.15) 0%, transparent 100%)",
+              },
+            }}
           >
             <FiGithub size={"18px"} />
           </Flex>
@@ -191,7 +220,11 @@ export const ContactInfo = () => {
             >
               GitHub
             </Text>
-            <Text color={"title.100"} fontSize={"16px"}>
+            <Text
+              color={"title.100"}
+              fontSize={"16px"}
+              _groupHover={{ color: "tertiary" }}
+            >
               GovindKurapati
             </Text>
             {/* <LuExternalLink /> */}

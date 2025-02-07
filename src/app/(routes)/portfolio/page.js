@@ -34,8 +34,8 @@ export default async function Portfolio({ searchParams }) {
     {
       id: 3,
       title: "ScarletHacks2025 IITC Hackathon",
-      tag: "Design",
-      linkUrl: "https://www.apple.com",
+      tag: "Development",
+      linkUrl: "https://www.scarlethacks.com/",
       imageUrl: "scarlet-hacks-design.png",
     },
   ];

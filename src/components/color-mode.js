@@ -30,7 +30,7 @@ export function useColorModeValue(light, dark) {
 
 export function ColorModeIcon() {
   const { colorMode } = useColorMode();
-  return colorMode === "light" ? <LuSun /> : <LuMoon />;
+  return colorMode === "light" ? <LuMoon /> : <LuSun />;
 }
 
 export const ColorModeButton = forwardRef(function ColorModeButton(props, ref) {

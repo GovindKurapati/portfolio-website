@@ -1,6 +1,15 @@
 "use server";
 import IconWrapper from "@/components/IconWrapper";
-import { Flex, Heading, Text, Icon, Box, Link, Image } from "@chakra-ui/react";
+import {
+  Flex,
+  Heading,
+  Text,
+  Icon,
+  Box,
+  Link,
+  Image,
+  Grid,
+} from "@chakra-ui/react";
 import {
   SiTypescript,
   SiJavascript,
@@ -27,9 +36,10 @@ import {
   SiDotnet,
 } from "react-icons/si";
 import { FaAws, FaGithub, FaJava, FaPlay } from "react-icons/fa";
+import RecentlyPlayed from "@/components/RecentlyPlayed";
 
 // Utility function to lighten colors
-const lightenColor = (color, amount = 0.15) => {
+const lightenColor = (color, amount = 0.55) => {
   // Remove any leading #
   color = color.replace("#", "");
 
@@ -141,6 +151,7 @@ const TechBlock = ({ icon, name, iconColor }) => {
         borderColor: iconColor,
       }}
       className="group"
+      backgroundColor={"secondary"}
     >
       {/* <IconWrapper icon={icon} /> */}
 
@@ -282,11 +293,19 @@ export async function Home() {
         ))}
       </Flex>
 
-      {/* <Heading size={"2xl"} mt={"6"} fontWeight={600}>
+      <Heading size={"2xl"} mt={"6"} fontWeight={600}>
         Activity
       </Heading>
-      <Text my={"4"}>What I’ve recently listened to and watched and read.</Text>
-      <Flex
+      <Text my={"2"}>What I’ve recently listened and watched.</Text>
+      <Grid
+        gridTemplateColumns={{ base: "1fr", md: "1fr 1fr" }}
+        gap={"20px"}
+        my={"2"}
+      >
+        <RecentlyPlayed />
+      </Grid>
+
+      {/*<Flex
         gap={4}
         mb={8}
         flexDir={{ base: "column", md: "row" }}
