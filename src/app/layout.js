@@ -3,6 +3,7 @@ import { ProfileSideBar } from "@/components/ProfileSideBar";
 import { Flex, Box } from "@chakra-ui/react";
 import { Header } from "@/components/header";
 import { NavBar } from "@/components/NavBar";
+import Script from "next/script";
 
 export const metadata = {
   title: "Govind Kurapati",
@@ -24,6 +25,14 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en" suppressHydrationWarning={true}>
+      <head>
+        <Script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="de1f9ed3-d8bb-424a-9e00-5d027dfa2722"
+          strategy="afterInteractive"
+        />
+      </head>
       <body>
         <Provider>
           <Flex
