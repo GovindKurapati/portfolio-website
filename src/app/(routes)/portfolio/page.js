@@ -38,6 +38,13 @@ export default async function Portfolio({ searchParams }) {
       linkUrl: "https://www.scarlethacks.com/",
       imageUrl: "scarlet-hacks-design.png",
     },
+    {
+      id: 4,
+      title: "Ticketmaster Clone",
+      tag: "Development",
+      linkUrl: "https://github.com/GovindKurapati/ticketmaster-clone",
+      imageUrl: "ticketmaster-project.png",
+    },
   ];
 
   const { filter = "all" } = await searchParams;
