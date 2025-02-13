@@ -35,8 +35,17 @@ import {
   SiPython,
   SiDotnet,
 } from "react-icons/si";
-import { FaAws, FaGithub, FaJava, FaPlay } from "react-icons/fa";
+import {
+  FaAws,
+  FaBootstrap,
+  FaDocker,
+  FaFigma,
+  FaGithub,
+  FaJava,
+  FaPlay,
+} from "react-icons/fa";
 import RecentlyPlayed from "@/components/RecentlyPlayed";
+import RecentlyRead from "@/components/RecentlyRead";
 
 // Utility function to lighten colors
 const lightenColor = (color, amount = 0.55) => {
@@ -216,10 +225,11 @@ const ActivityCard = ({ type, title, subtitle, image }) => {
 
 export async function Home() {
   const technologies = [
-    { icon: <SiTypescript />, name: "TypeScript", iconColor: "#387cc8" },
-    { icon: <SiJavascript />, name: "JavaScript", iconColor: "#f0dc57" },
-    { icon: <SiPython />, name: "Python", iconColor: "#306998" },
     { icon: <FaJava />, name: "Java", iconColor: "#ee2a2c" },
+    { icon: <SiPython />, name: "Python", iconColor: "#306998" },
+    { icon: <SiJavascript />, name: "JavaScript", iconColor: "#f0dc57" },
+    { icon: <SiTypescript />, name: "TypeScript", iconColor: "#387cc8" },
+    { icon: <SiMysql />, name: "SQL", iconColor: "#3D6E93" },
     { icon: <SiReact />, name: "React", iconColor: "#21d9fe" },
     { icon: <SiAngular />, name: "Angular", iconColor: "#c51435" },
     { icon: <SiVuedotjs />, name: "Vue.js", iconColor: "#48ba87" },
@@ -235,6 +245,9 @@ export async function Home() {
     { icon: <SiChakraui />, name: "ChakraUI", iconColor: "#51cac5" },
     { icon: <SiGit />, name: "Git", iconColor: "#f1563b" },
     { icon: <FaGithub />, name: "GitHub", iconColor: "#383737" },
+    { icon: <FaDocker />, name: "Docker", iconColor: "#1C63ED" },
+    { icon: <FaFigma />, name: "Figma", iconColor: "#874FFF" },
+    { icon: <FaBootstrap />, name: "Bootstrap", iconColor: "#6E2CF3" },
 
     // {
     //   icon: <SiMaterialdesign />,
@@ -282,7 +295,12 @@ export async function Home() {
       <Heading size={"2xl"} my={"6"} fontWeight={600}>
         Tech Stack
       </Heading>
-      <Flex mx="auto" gap={4} flexWrap={"wrap"}>
+      <Flex
+        mx="auto"
+        gap={4}
+        flexWrap={"wrap"}
+        justifyContent={{ base: "center", md: "flex-start" }}
+      >
         {technologies.map((tech, index) => (
           <TechBlock
             key={index}
@@ -296,12 +314,13 @@ export async function Home() {
       <Heading size={"2xl"} mt={"6"} fontWeight={600}>
         Activity
       </Heading>
-      <Text my={"2"}>What I’ve recently listened and watched.</Text>
+      <Text my={"2"}>What I’ve recently listened and read.</Text>
       <Grid
         gridTemplateColumns={{ base: "1fr", md: "1fr 1fr" }}
         gap={"20px"}
         my={"2"}
       >
+        <RecentlyRead />
         <RecentlyPlayed />
       </Grid>
 

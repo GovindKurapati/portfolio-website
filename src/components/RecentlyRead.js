@@ -1,18 +1,18 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Box, Flex, Text, Image, Link, Icon } from "@chakra-ui/react";
-import { FaSpotify } from "react-icons/fa";
+import { SiLiteral } from "react-icons/si";
 
-export default function RecentlyPlayed() {
-  const [song, setSong] = useState(null);
+export default function RecentlyRead() {
+  const [book, setBook] = useState(null);
 
-  useEffect(() => {
-    fetch("/api/spotify")
-      .then((res) => res.json())
-      .then((data) => setSong(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch("/api/spotify")
+  //     .then((res) => res.json())
+  //     .then((data) => setSong(data));
+  // }, []);
 
-  if (!song) return <p>Loading...</p>;
+  // if (!song) return <p>Loading...</p>;
 
   return (
     <Flex
@@ -49,7 +49,7 @@ export default function RecentlyPlayed() {
         zIndex={-1}
       />
       <Link
-        href={song.url}
+        href="https://literal.club/govind_k/book/shiv-khera-you-can-win-195z0"
         target="_blank"
         rel="noopener noreferrer"
         w={"100%"}
@@ -59,8 +59,8 @@ export default function RecentlyPlayed() {
         <Flex align="center" gap={4}>
           <Box position="relative" minW="70px" minH="70px" h="70px">
             <Image
-              src={song.image}
-              alt={song.album}
+              src="https://assets.literal.club/4/ckt4m8cdy1182043l77a7ychsuv9.jpg"
+              alt="You Can Win"
               borderRadius="lg"
               w="100%"
               h="100%"
@@ -78,10 +78,10 @@ export default function RecentlyPlayed() {
                 display={"inline-block"}
                 mr={2}
               >
-                LAST PLAYED
+                LAST READ
               </Text>
-              <Icon color="#31D866" boxSize={6}>
-                <FaSpotify />
+              <Icon color="title.100" boxSize={6}>
+                <SiLiteral />
               </Icon>
             </Box>
             <Box overflow="hidden" position="relative" width="300px">
@@ -101,7 +101,7 @@ export default function RecentlyPlayed() {
                   },
                 }}
               >
-                {song.name}
+                You Can Win
               </Text>
               <Text
                 color="title.100"
@@ -112,7 +112,7 @@ export default function RecentlyPlayed() {
                 textOverflow={"ellipsis"}
                 w={"80%"}
               >
-                {song.artist}
+                Shiv Khera
               </Text>
             </Box>
           </Flex>

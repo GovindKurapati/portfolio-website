@@ -122,7 +122,7 @@ export default function Gallery() {
             </Box>
 
             {/* Hover Overlay */}
-            <Flex
+            {/* <Flex
               className="overlay"
               position="absolute"
               top="0"
@@ -145,7 +145,7 @@ export default function Gallery() {
                   <AiOutlineEye />
                 </Icon>
               </Box>
-            </Flex>
+            </Flex> */}
           </Box>
         ))}
       </SimpleGrid>
