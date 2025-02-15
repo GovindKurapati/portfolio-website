@@ -1,37 +1,20 @@
 "use client";
-import {
-  Flex,
-  Text,
-  Heading,
-  Box,
-  SimpleGrid,
-  Imag,
-  HStack,
-  Button,
-  Image,
-  Icon,
-  DialogActionTrigger,
-  DialogBody,
-  DialogCloseTrigger,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  DialogRoot,
-  DialogTitle,
-  DialogTrigger,
-  Portal,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Flex, Heading, Box, SimpleGrid, Icon } from "@chakra-ui/react";
 import { useState } from "react";
 import NextImage from "next/image";
 import { AiOutlineEye } from "react-icons/ai";
+import CustomModal from "@/components/CustomModal";
 
 export default function Gallery() {
   const categories = [
-    { src: "/gallery/aws-saa-cert.jpg", category: "Certifications" },
-    { src: "/gallery/azure-az-100-cert.jpg", category: "Certifications" },
-    { src: "/gallery/lco-cert.jpeg", category: "Certifications" },
-    { src: "/gallery/udemy-web-dev.jpg", category: "Certifications" },
+    { id: "1", src: "/gallery/aws-saa-cert.jpg", category: "Certifications" },
+    {
+      id: "2",
+      src: "/gallery/azure-az-100-cert.jpg",
+      category: "Certifications",
+    },
+    { id: "3", src: "/gallery/lco-cert.jpeg", category: "Certifications" },
+    { id: "4", src: "/gallery/udemy-web-dev.jpg", category: "Certifications" },
     // { src: "/gallery/hack1.jpg", category: "Hackathons" },
     // { src: "/gallery/hack2.jpg", category: "Hackathons" },
     // { src: "/gallery/extra1.jpg", category: "Extracurriculars" },
@@ -45,8 +28,13 @@ export default function Gallery() {
       ? categories
       : categories.filter((img) => img.category == selectedCategory);
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
   const [open, setOpen] = useState(false);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+  const [modalImageUrl, setModalImageUrl] = useState("");
 
   return (
     <Flex w="100%" direction={"column"} position={"relative"}>
@@ -67,33 +55,12 @@ export default function Gallery() {
         Gallery
       </Heading>
 
-      {/* <Box maxW="6xl" mx="auto" p={5}> */}
-      {/* Category Buttons */}
-      {/* <HStack spacing={4} mb={5} justify="center">
-        {categories.map((category) => (
-          <Button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            colorScheme={selectedCategory == category ? "blue" : "gray"}
-            variant={selectedCategory == category ? "solid" : "outline"}
-          >
-            {category.category}
-          </Button>
-        ))}
-      </HStack> */}
-
-      {/* Image Grid */}
-      {/* <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={2} gap={4}>
-        {filteredImages.map((img, index) => (
-          <Box key={index} borderRadius="0px" overflow="hidden" boxShadow="md">
-            <Image asChild>
-              <NextImage src={img.src} alt={img.category} />
-            </Image>
-          </Box>
-        ))}
-      </SimpleGrid> */}
-
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={2} gap={4}>
+      <SimpleGrid
+        columns={{ base: 1, md: 2, lg: 2 }}
+        spacing={2}
+        gap={6}
+        mt={4}
+      >
         {filteredImages.map((img, index) => (
           <Box
             key={index}
@@ -122,7 +89,7 @@ export default function Gallery() {
             </Box>
 
             {/* Hover Overlay */}
-            {/* <Flex
+            <Flex
               className="overlay"
               position="absolute"
               top="0"
@@ -137,51 +104,32 @@ export default function Gallery() {
               justifyContent="center"
               alignItems="center"
               onClick={() => {
-                setOpen(true);
+                openModal();
+                setModalImageUrl(img.src);
               }}
+              display={{ base: "none", md: "flex" }}
             >
               <Box backgroundColor={"secondary"} p={3} borderRadius={"10px"}>
                 <Icon boxSize={7} color={"tertiary"}>
                   <AiOutlineEye />
                 </Icon>
               </Box>
-            </Flex> */}
+            </Flex>
           </Box>
         ))}
       </SimpleGrid>
-      {/* </Box> */}
-      {/* <Portal>
-        <DialogRoot
-          lazyMount
-          open={"true"}
-          onOpenChange={(e) => setOpen(e.open)}
-        >
-          <DialogTrigger asChild>
-            <Button
-              variant="outline"
-              onClick={() => {
-                setOpen(!open);
-              }}
-            >
-              Open
-            </Button>
-          </DialogTrigger>
-
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Dialog Title</DialogTitle>
-            </DialogHeader>
-            <DialogBody></DialogBody>
-            <DialogFooter>
-              <DialogActionTrigger asChild>
-                <Button variant="outline">Cancel</Button>
-              </DialogActionTrigger>
-              <Button>Save</Button>
-            </DialogFooter>
-            <DialogCloseTrigger />
-          </DialogContent>
-        </DialogRoot>
-      </Portal> */}
+      <Box display={{ base: "none", md: "block" }}>
+        <CustomModal isOpen={isModalOpen} onClose={closeModal}>
+          <Box position="relative" width="100%" height="0" paddingBottom="75%">
+            <NextImage
+              src={modalImageUrl}
+              alt="certification"
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </Box>
+        </CustomModal>
+      </Box>
     </Flex>
   );
 }

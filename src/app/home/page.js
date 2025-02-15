@@ -241,19 +241,13 @@ export async function Home() {
     { icon: <SiMysql />, name: "MySQL", iconColor: "#1e6997" },
     { icon: <SiServerless />, name: "Serverless", iconColor: "#f15952" },
     { icon: <SiDotnet />, name: ".NET Core", iconColor: "#5732d6" },
+    { icon: <SiGit />, name: "Git", iconColor: "#f1563b" },
     { icon: <FaAws />, name: "AWS", iconColor: "#ff9c15" },
     { icon: <SiChakraui />, name: "ChakraUI", iconColor: "#51cac5" },
-    { icon: <SiGit />, name: "Git", iconColor: "#f1563b" },
     { icon: <FaGithub />, name: "GitHub", iconColor: "#383737" },
     { icon: <FaDocker />, name: "Docker", iconColor: "#1C63ED" },
     { icon: <FaFigma />, name: "Figma", iconColor: "#874FFF" },
     { icon: <FaBootstrap />, name: "Bootstrap", iconColor: "#6E2CF3" },
-
-    // {
-    //   icon: <SiMaterialdesign />,
-    //   name: "Material Design",
-    //   iconColor: "#13689e",
-    // },
   ];
 
   return (
@@ -323,38 +317,6 @@ export async function Home() {
         <RecentlyRead />
         <RecentlyPlayed />
       </Grid>
-
-      {/*<Flex
-        gap={4}
-        mb={8}
-        flexDir={{ base: "column", md: "row" }}
-        w="100%"
-        flexWrap={"wrap"}
-        justifyContent={"center"}
-        alignItems={"center"}
-      > */}
-      {/* <ActivityCard
-          type="NOW_PLAYING"
-          title="Two Faced"
-          subtitle="Linkin Park"
-          image="/song-cover.webp"
-          w="50%"
-        />
-        <ActivityCard
-          type="FINISHED"
-          title="Atomic Habits"
-          subtitle="James Clear"
-          image="/book-cover.jpg"
-          w="50%"
-        />
-        <ActivityCard
-          type="FINISHED"
-          title="Atomic Habits"
-          subtitle="James Clear"
-          image="/book-cover.jpg"
-          w="50%"
-        /> */}
-      {/* </Flex> */}
     </Flex>
   );
 }
