@@ -4,7 +4,7 @@ import { useState } from "react";
 import NextImage from "next/image";
 import { AiOutlineEye } from "react-icons/ai";
 import CustomModal from "@/components/CustomModal";
-
+import { motion } from "framer-motion";
 export default function Gallery() {
   const categories = [
     { id: "1", src: "/gallery/aws-saa-cert.jpg", category: "Certifications" },
@@ -62,60 +62,71 @@ export default function Gallery() {
         mt={4}
       >
         {filteredImages.map((img, index) => (
-          <Box
+          <motion.div
             key={index}
-            borderRadius="0px"
-            overflow="hidden"
-            boxShadow="md"
-            position="relative"
-            _hover={{
-              "& .overlay": {
-                opacity: 1,
-              },
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.1,
+              type: "spring",
+              stiffness: 100
             }}
           >
             <Box
+              borderRadius="0px"
+              overflow="hidden"
+              boxShadow="md"
               position="relative"
-              width="100%"
-              height="0"
-              paddingBottom="75%"
-            >
-              <NextImage
-                src={img.src}
-                alt={img.category}
-                fill
-                style={{ objectFit: "cover" }}
-              />
-            </Box>
-
-            {/* Hover Overlay */}
-            <Flex
-              className="overlay"
-              position="absolute"
-              top="0"
-              left="0"
-              w="100%"
-              h="100%"
-              bg="blackAlpha.400"
-              backdropFilter="blur(4px)"
-              opacity={0}
-              transition="opacity 0.2s"
-              cursor="pointer"
-              justifyContent="center"
-              alignItems="center"
-              onClick={() => {
-                openModal();
-                setModalImageUrl(img.src);
+              _hover={{
+                "& .overlay": {
+                  opacity: 1,
+                },
               }}
-              display={{ base: "none", md: "flex" }}
             >
-              <Box backgroundColor={"secondary"} p={3} borderRadius={"10px"}>
-                <Icon boxSize={7} color={"tertiary"}>
-                  <AiOutlineEye />
-                </Icon>
+              <Box
+                position="relative"
+                width="100%"
+                height="0"
+                paddingBottom="75%"
+              >
+                <NextImage
+                  src={img.src}
+                  alt={img.category}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
               </Box>
-            </Flex>
-          </Box>
+
+              {/* Hover Overlay */}
+              <Flex
+                className="overlay"
+                position="absolute"
+                top="0"
+                left="0"
+                w="100%"
+                h="100%"
+                bg="blackAlpha.400"
+                backdropFilter="blur(4px)"
+                opacity={0}
+                transition="opacity 0.2s"
+                cursor="pointer"
+                justifyContent="center"
+                alignItems="center"
+                onClick={() => {
+                  openModal();
+                  setModalImageUrl(img.src);
+                }}
+                display={{ base: "none", md: "flex" }}
+              >
+                <Box backgroundColor={"secondary"} p={3} borderRadius={"10px"}>
+                  <Icon boxSize={7} color={"tertiary"}>
+                    <AiOutlineEye />
+                  </Icon>
+                </Box>
+              </Flex>
+            </Box>
+          </motion.div>
         ))}
       </SimpleGrid>
       <Box display={{ base: "none", md: "block" }}>

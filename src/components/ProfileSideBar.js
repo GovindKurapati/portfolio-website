@@ -29,7 +29,7 @@ export const ProfileSideBar = () => {
       w={{ base: "90%", xl: "27%" }}
       backgroundColor={"primary"}
       direction={"column"}
-      position={{ base: "relative", xl: "sticky" }}
+      position={{ base: "relative", md: "sticky" }}
       top={"60px"}
       maxHeight={"max-content"}
       alignItems={{ base: "flex-start", xl: "center" }}
@@ -38,7 +38,6 @@ export const ProfileSideBar = () => {
       marginBottom={"0px"}
       border="1px solid"
       borderColor={"borderColor"}
-      height={"max-content"}
       mb={{ base: "60px", xl: "0px" }}
     >
       <Button

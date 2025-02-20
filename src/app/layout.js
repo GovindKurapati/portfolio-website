@@ -7,15 +7,50 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Govind Kurapati",
-  description: "Portfolio website",
+  description:
+    "Portfolio website of Govind Kurapati - Software Engineer and Full Stack Developer",
   authors: [{ name: "Govind Kurapati" }],
+  keywords: [
+    "Govind Kurapati",
+    "Software Engineer",
+    "Web Developer",
+    "Portfolio",
+    "React Developer",
+    "Full Stack Developer",
+  ],
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://govind-kurapati.com",
+    site_name: "Govind Kurapati Portfolio",
+    title: "Govind Kurapati - Software Engineer",
+    description:
+      "Portfolio website of Govind Kurapati - Software Engineer and Developer",
+    images: [
+      {
+        url: "/profile-pic.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Govind Kurapati - Software Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Govind Kurapati - Software Engineer",
+    description:
+      "Portfolio website of Govind Kurapati - Software Engineer and Developer",
+    images: ["/l/profile-pic.jpg"],
+    creator: "@YourTwitterHandle",
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: [
       {
-        url: "/logo192.png",
-        sizes: "192x192",
+        url: "/apple-touch-icon.png",
+        sizes: "180x180",
         type: "image/png",
       },
     ],

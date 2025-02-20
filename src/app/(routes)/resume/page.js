@@ -10,7 +10,7 @@ import {
   List,
   useToken,
 } from "@chakra-ui/react";
-
+import { motion } from "framer-motion";
 import { MdOutlineWorkOutline } from "react-icons/md";
 import { MdOutlineVolunteerActivism } from "react-icons/md";
 import { LuGraduationCap } from "react-icons/lu";
@@ -159,41 +159,71 @@ export default function Resume() {
   ];
 
   return (
-    <Flex w="100%" direction={"column"} position={"relative"}>
-      <Heading
-        size={"4xl"}
-        mb="30px"
-        _after={{
-          content: '""',
-          position: "absolute",
-          left: "0",
-          top: "55px",
-          height: "5px",
-          width: "40px",
-          backgroundColor: "tertiary",
-          borderRadius: "3px",
-        }}
-      >
-        Resume
-      </Heading>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Flex w="100%" direction={"column"} position={"relative"}>
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <Heading
+            size={"4xl"}
+            mb="30px"
+            _after={{
+              content: '""',
+              position: "absolute",
+              left: "0",
+              top: "55px",
+              height: "5px", 
+              width: "40px",
+              backgroundColor: "tertiary",
+              borderRadius: "3px",
+            }}
+          >
+            Resume
+          </Heading>
+        </motion.div>
 
-      <WorkItem
-        icon={<LuGraduationCap />}
-        title="Education"
-        data={EDUCATION_DATA}
-      />
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <WorkItem
+            icon={<LuGraduationCap />}
+            title="Education"
+            data={EDUCATION_DATA}
+          />
+        </motion.div>
 
-      <WorkItem
-        icon={<MdOutlineWorkOutline />}
-        title="Work Experience"
-        data={EXPERIENCE_DATA}
-      />
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <WorkItem
+            icon={<MdOutlineWorkOutline />}
+            title="Work Experience"
+            data={EXPERIENCE_DATA}
+          />
+        </motion.div>
 
-      <WorkItem
-        icon={<MdOutlineVolunteerActivism />}
-        title="Volunteer Experience"
-        data={VOLUNTEER_DATA}
-      />
-    </Flex>
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+        >
+          <WorkItem
+            icon={<MdOutlineVolunteerActivism />}
+            title="Volunteer Experience"
+            data={VOLUNTEER_DATA}
+          />
+        </motion.div>
+      </Flex>
+    </motion.div>
   );
 }

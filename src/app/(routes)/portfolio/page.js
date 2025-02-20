@@ -1,19 +1,7 @@
-import {
-  Flex,
-  Text,
-  Heading,
-  Box,
-  VStack,
-  Icon,
-  Link,
-  Grid,
-} from "@chakra-ui/react";
-
-import { BsBriefcase } from "react-icons/bs";
-import { IoLocationOutline } from "react-icons/io5";
-import { BsCalendar3 } from "react-icons/bs";
+"use client";
+import { Flex, Text, Heading, Link, Grid } from "@chakra-ui/react";
 import { Card } from "@/components/card";
-
+import { motion } from "framer-motion";
 export default async function Portfolio({ searchParams }) {
   const PORTFOLIO_DATA = [
     {
@@ -100,15 +88,27 @@ export default async function Portfolio({ searchParams }) {
         gap={"30px"}
         my={"10px"}
       >
-        {PORTFOLIO_DATA.map((item) =>
+        {PORTFOLIO_DATA.map((item, index) =>
           item.tag == filter || filter == "all" || filter == "" ? (
-            <Card
+            <motion.div
               key={item.id}
-              imageUrl={item.imageUrl}
-              title={item.title}
-              tag={item.tag}
-              linkUrl={item.linkUrl}
-            />
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+                type: "spring",
+                stiffness: 100,
+                damping: 15
+              }}
+            >
+              <Card
+                imageUrl={item.imageUrl}
+                title={item.title}
+                tag={item.tag}
+                linkUrl={item.linkUrl}
+              />
+            </motion.div>
           ) : null
         )}
       </Grid>
