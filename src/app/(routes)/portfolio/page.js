@@ -6,32 +6,39 @@ export default async function Portfolio({ searchParams }) {
   const PORTFOLIO_DATA = [
     {
       id: 1,
-      title: "Personal Website",
+      title: "GenScribe",
       tag: "Development",
-      linkUrl: "https://govind-kurapati.vercel.app",
-      imageUrl: "personal-website.png",
+      linkUrl: "https://gen-scribe.govind-kurapati.com/",
+      imageUrl: "GenScribeSS.png",
     },
     {
-      id: 2,
-      title: "Old Personal Website",
-      tag: "Design",
-      linkUrl:
-        "https://www.figma.com/design/RhApXpafsdkHZOQ737Wbnq/Portfolio---GK?node-id=0-1&p=f",
-      imageUrl: "old-website-design.png",
-    },
-    {
-      id: 3,
+      id: 4,
       title: "ScarletHacks2025 IITC Hackathon",
       tag: "Development",
       linkUrl: "https://www.scarlethacks.com/",
       imageUrl: "scarlet-hacks-design.png",
     },
     {
-      id: 4,
+      id: 2,
+      title: "Personal Website",
+      tag: "Development",
+      linkUrl: "https://govind-kurapati.com/",
+      imageUrl: "personal-website.png",
+    },
+    {
+      id: 5,
       title: "Ticketmaster Clone",
       tag: "Development",
       linkUrl: "https://github.com/GovindKurapati/ticketmaster-clone",
       imageUrl: "ticketmaster-project.png",
+    },
+    {
+      id: 3,
+      title: "Old Personal Website",
+      tag: "Design",
+      linkUrl:
+        "https://www.figma.com/design/RhApXpafsdkHZOQ737Wbnq/Portfolio---GK?node-id=0-1&p=f",
+      imageUrl: "old-website-design.png",
     },
   ];
 
@@ -99,7 +106,7 @@ export default async function Portfolio({ searchParams }) {
                 delay: index * 0.1,
                 type: "spring",
                 stiffness: 100,
-                damping: 15
+                damping: 15,
               }}
             >
               <Card

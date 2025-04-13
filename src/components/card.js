@@ -21,14 +21,14 @@ export const Card = ({
     >
       <Flex
         direction={"column"}
-        maxHeight={"250px"}
+        maxHeight={"300px"}
         gap="10px"
         className="group"
       >
         <Flex
           justify="center"
           align="center"
-          maxHeight={"250px"}
+          maxHeight={"300px"}
           overflow="hidden"
           borderRadius="20px"
           direction={"column"}
