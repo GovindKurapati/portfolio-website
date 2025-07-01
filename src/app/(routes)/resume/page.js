@@ -152,7 +152,7 @@ export default function Resume() {
       timePeriod: "Aug 2024 - May 2026",
       location: "Chicago, USA",
       activites: [
-        "GPA: 3.66/4.0",
+        "GPA: 3.83/4.0",
         "Relevant Coursework: Algorithms, Database Systems, Machine Learning, Software Engineering, Computer Networks.",
       ],
     },
@@ -178,7 +178,7 @@ export default function Resume() {
               position: "absolute",
               left: "0",
               top: "55px",
-              height: "5px", 
+              height: "5px",
               width: "40px",
               backgroundColor: "tertiary",
               borderRadius: "3px",

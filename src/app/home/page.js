@@ -1,5 +1,4 @@
 "use server";
-import IconWrapper from "@/components/IconWrapper";
 import {
   Flex,
   Heading,
@@ -16,17 +15,11 @@ import {
   SiJest,
   SiReact,
   SiNextdotjs,
-  SiStyledcomponents,
-  SiTailwindcss,
   SiHtml5,
   SiCss3,
-  SiAndroid,
-  SiKotlin,
   SiNodedotjs,
-  SiMongodb,
   SiExpress,
   SiGit,
-  SiMaterialdesign,
   SiAngular,
   SiVuedotjs,
   SiMysql,
@@ -34,6 +27,7 @@ import {
   SiChakraui,
   SiPython,
   SiDotnet,
+  SiLangchain,
 } from "react-icons/si";
 import {
   FaAws,
@@ -179,50 +173,6 @@ const TechBlock = ({ icon, name, iconColor }) => {
   );
 };
 
-const ActivityCard = ({ type, title, subtitle, image }) => {
-  return (
-    <Box
-      bg="secondary"
-      borderRadius="15px"
-      p={4}
-      backdropFilter="blur(10px)"
-      transition="all 0.3s"
-      _hover={{ bg: "rgba(255, 255, 255, 0.08)" }}
-      w={"32%"}
-    >
-      <Flex gap={4}>
-        <Image
-          src={image}
-          alt={title}
-          boxSize="80px"
-          borderRadius="md"
-          objectFit="cover"
-          objectPosition={"center"}
-        />
-
-        <Box>
-          {type === "NOW_PLAYING" ? (
-            <Flex align="center" gap={2}>
-              <Text color="gray.400" fontSize="sm" mb={2}>
-                NOW PLAYING
-                <Icon color="white" size="xs">
-                  <FaPlay />
-                </Icon>
-              </Text>
-            </Flex>
-          ) : (
-            "FINISHED"
-          )}
-          <Text color="white" fontSize="md" fontWeight="medium">
-            {title}
-          </Text>
-          <Text color="gray.400">{subtitle}</Text>
-        </Box>
-      </Flex>
-    </Box>
-  );
-};
-
 export async function Home() {
   const technologies = [
     { icon: <FaJava />, name: "Java", iconColor: "#ee2a2c" },
@@ -248,6 +198,7 @@ export async function Home() {
     { icon: <FaDocker />, name: "Docker", iconColor: "#1C63ED" },
     { icon: <FaFigma />, name: "Figma", iconColor: "#874FFF" },
     { icon: <FaBootstrap />, name: "Bootstrap", iconColor: "#6E2CF3" },
+    { icon: <SiLangchain />, name: "LangChain", iconColor: "#1b3c3b" },
   ];
 
   return (
@@ -269,7 +220,7 @@ export async function Home() {
         About Me
       </Heading>
 
-      <Text>
+      <Text textStyle={"lg"}>
         I’m a passionate computer science graduate student at{" "}
         <Link href="https://www.iit.edu/" target={"_blank"} outline={"none"}>
           <Text as="span" color={"tertiary"} fontWeight={"500"}>
@@ -279,7 +230,7 @@ export async function Home() {
         with over three years of experience in software development.
       </Text>
       <br />
-      <Text>
+      <Text textStyle={"lg"}>
         My journey includes building user-centric web applications, scalable
         backend systems, and cloud-based solutions. From designing dynamic
         interfaces to optimizing APIs, I’m driven by the challenge of solving

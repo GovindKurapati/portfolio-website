@@ -19,13 +19,6 @@ export default async function Portfolio({ searchParams }) {
       imageUrl: "scarlet-hacks-design.png",
     },
     {
-      id: 2,
-      title: "Personal Website",
-      tag: "Development",
-      linkUrl: "https://govind-kurapati.com/",
-      imageUrl: "personal-website.png",
-    },
-    {
       id: 5,
       title: "Ticketmaster Clone",
       tag: "Development",
@@ -34,7 +27,7 @@ export default async function Portfolio({ searchParams }) {
     },
     {
       id: 3,
-      title: "Old Personal Website",
+      title: "Old Portfolio",
       tag: "Design",
       linkUrl:
         "https://www.figma.com/design/RhApXpafsdkHZOQ737Wbnq/Portfolio---GK?node-id=0-1&p=f",
@@ -94,6 +87,7 @@ export default async function Portfolio({ searchParams }) {
         gridTemplateColumns={{ base: "1fr", md: "1fr 1fr" }}
         gap={"30px"}
         my={"10px"}
+        minHeight={"400px"}
       >
         {PORTFOLIO_DATA.map((item, index) =>
           item.tag == filter || filter == "all" || filter == "" ? (

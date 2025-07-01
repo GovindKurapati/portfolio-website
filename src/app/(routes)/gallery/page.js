@@ -15,10 +15,12 @@ export default function Gallery() {
     },
     { id: "3", src: "/gallery/lco-cert.jpeg", category: "Certifications" },
     { id: "4", src: "/gallery/udemy-web-dev.jpg", category: "Certifications" },
-    // { src: "/gallery/hack1.jpg", category: "Hackathons" },
-    // { src: "/gallery/hack2.jpg", category: "Hackathons" },
-    // { src: "/gallery/extra1.jpg", category: "Extracurriculars" },
-    // { src: "/gallery/extra2.jpg", category: "Extracurriculars" },
+    { id: "5", src: "/gallery/coursera-ml.jpeg", category: "Certifications" },
+    {
+      id: "6",
+      src: "/gallery/udemy-clean-code.jpg",
+      category: "Certifications",
+    },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -70,7 +72,7 @@ export default function Gallery() {
               duration: 0.5,
               delay: index * 0.1,
               type: "spring",
-              stiffness: 100
+              stiffness: 100,
             }}
           >
             <Box

@@ -18,17 +18,19 @@ export const Card = ({
       isExternal
       target="_blank"
       outline={"none"}
+      width={"100%"}
     >
       <Flex
         direction={"column"}
         maxHeight={"300px"}
         gap="10px"
         className="group"
+        width={"100%"}
       >
         <Flex
           justify="center"
           align="center"
-          maxHeight={"300px"}
+          height={"300px"}
           overflow="hidden"
           borderRadius="20px"
           direction={"column"}
