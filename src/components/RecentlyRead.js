@@ -1,18 +1,19 @@
 "use client";
-import { useEffect, useState } from "react";
-import { Box, Flex, Text, Image, Link, Icon } from "@chakra-ui/react";
+import { use, useEffect, useState } from "react";
+import { Box, Flex, Text, Image, Link, Icon, Skeleton } from "@chakra-ui/react";
 import { SiLiteral } from "react-icons/si";
 
 export default function RecentlyRead() {
   const [book, setBook] = useState(null);
 
-  // useEffect(() => {
-  //   fetch("/api/spotify")
-  //     .then((res) => res.json())
-  //     .then((data) => setSong(data));
-  // }, []);
+  useEffect(() => {
+    fetch("/api/literal-club")
+      .then((res) => res.json())
+      .then((data) => setBook(data));
+    console.log("book", book);
+  }, []);
 
-  // if (!song) return <p>Loading...</p>;
+  if (!book) return <Skeleton height="125px" />;
 
   return (
     <Flex
@@ -49,7 +50,7 @@ export default function RecentlyRead() {
         zIndex={-1}
       />
       <Link
-        href="https://literal.club/govind_k/book/shiv-khera-you-can-win-195z0"
+        href={book.url}
         target="_blank"
         rel="noopener noreferrer"
         w={"100%"}
@@ -59,7 +60,7 @@ export default function RecentlyRead() {
         <Flex align="center" gap={4}>
           <Box position="relative" minW="70px" minH="70px" h="70px">
             <Image
-              src="https://assets.literal.club/4/ckt4m8cdy1182043l77a7ychsuv9.jpg"
+              src={book.image}
               alt="You Can Win"
               borderRadius="lg"
               w="100%"
@@ -101,7 +102,7 @@ export default function RecentlyRead() {
                   },
                 }}
               >
-                You Can Win
+                {book.title}
               </Text>
               <Text
                 color="title.100"
@@ -112,7 +113,7 @@ export default function RecentlyRead() {
                 textOverflow={"ellipsis"}
                 w={"80%"}
               >
-                Shiv Khera
+                {book.author}
               </Text>
             </Box>
           </Flex>

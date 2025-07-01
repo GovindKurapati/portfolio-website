@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Box, Flex, Text, Image, Link, Icon } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, Link, Icon, Skeleton } from "@chakra-ui/react";
 import { FaSpotify } from "react-icons/fa";
 
 export default function RecentlyPlayed() {
@@ -12,7 +12,7 @@ export default function RecentlyPlayed() {
       .then((data) => setSong(data));
   }, []);
 
-  if (!song) return <p>Loading...</p>;
+  if (!song) return <Skeleton height="125px" />;
 
   return (
     <Flex
