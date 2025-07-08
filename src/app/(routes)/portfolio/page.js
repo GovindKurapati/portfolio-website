@@ -12,6 +12,13 @@ export default async function Portfolio({ searchParams }) {
       imageUrl: "GenScribeSS.png",
     },
     {
+      id: 2,
+      title: "Developer Docs Chat (RAG)",
+      tag: "Development",
+      linkUrl: "https://github.com/GovindKurapati/dev_docs_chat",
+      imageUrl: "dev-docs-chat.png",
+    },
+    {
       id: 4,
       title: "ScarletHacks2025 IITC Hackathon",
       tag: "Development",
