@@ -2,8 +2,8 @@
 import { Flex, Text, Heading, Link, Grid } from "@chakra-ui/react";
 import { Card } from "@/components/card";
 import { motion } from "framer-motion";
-export default async function Portfolio({ searchParams }) {
-  const PORTFOLIO_DATA = [
+export default async function Projects({ searchParams }) {
+  const PROJECTS_DATA = [
     {
       id: 1,
       title: "GenScribe",
@@ -59,13 +59,13 @@ export default async function Portfolio({ searchParams }) {
           borderRadius: "3px",
         }}
       >
-        Portfolio
+        Projects
       </Heading>
 
       <Flex gap={4} my="20px">
         {/* <p>{searchParams.filter}</p> */}
 
-        <Link href="/portfolio?filter=all" outline={"none"}>
+        <Link href="/projects?filter=all" outline={"none"}>
           <Text
             color={filter == "all" ? "tertiary" : "title.100"}
             fontSize={"lg"}
@@ -73,7 +73,7 @@ export default async function Portfolio({ searchParams }) {
             All
           </Text>
         </Link>
-        <Link href="/portfolio?filter=Design" outline={"none"}>
+        <Link href="/projects?filter=Design" outline={"none"}>
           <Text
             color={filter == "Design" ? "tertiary" : "title.100"}
             fontSize={"lg"}
@@ -81,7 +81,7 @@ export default async function Portfolio({ searchParams }) {
             Design
           </Text>
         </Link>
-        <Link href="/portfolio?filter=Development" outline={"none"}>
+        <Link href="/projects?filter=Development" outline={"none"}>
           <Text
             color={filter == "Development" ? "tertiary" : "title.100"}
             fontSize={"lg"}
@@ -96,7 +96,7 @@ export default async function Portfolio({ searchParams }) {
         my={"10px"}
         minHeight={"400px"}
       >
-        {PORTFOLIO_DATA.map((item, index) =>
+        {PROJECTS_DATA.map((item, index) =>
           item.tag == filter || filter == "all" || filter == "" ? (
             <motion.div
               key={item.id}

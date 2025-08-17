@@ -10,7 +10,6 @@ export default function RecentlyRead() {
     fetch("/api/literal-club")
       .then((res) => res.json())
       .then((data) => setBook(data));
-    console.log("book", book);
   }, []);
 
   if (!book) return <Skeleton height="125px" />;

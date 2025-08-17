@@ -5,7 +5,7 @@ import NextImage from "next/image";
 import { AiOutlineEye } from "react-icons/ai";
 import CustomModal from "@/components/CustomModal";
 import { motion } from "framer-motion";
-export default function Gallery() {
+export default function Certifications() {
   const categories = [
     { id: "1", src: "/gallery/aws-saa-cert.jpg", category: "Certifications" },
     {
@@ -54,7 +54,7 @@ export default function Gallery() {
           borderRadius: "3px",
         }}
       >
-        Gallery
+        Certifications
       </Heading>
 
       <SimpleGrid

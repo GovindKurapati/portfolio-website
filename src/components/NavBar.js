@@ -22,7 +22,7 @@ export const NavBar = () => {
       justifyContent={"space-around"}
       alignItems={"center"}
       w="100%"
-      zIndex={10}
+      // zIndex={10}
       bg="secondary"
       backdropFilter="blur(10px)"
       border="1px solid var(--jet)"

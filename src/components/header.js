@@ -41,7 +41,7 @@ export const Header = () => {
       align="center"
       position={"absolute"}
       as="nav"
-      zIndex={10}
+      // zIndex={10}
       bg="secondary"
       backdropFilter="blur(10px)"
       border={"1px solid"}
@@ -62,14 +62,14 @@ export const Header = () => {
         <NavLink href="/resume" isActive={isActive("/resume")}>
           Resume
         </NavLink>
-        <NavLink href="/portfolio" isActive={isActive("/portfolio")}>
-          Portfolio
+        <NavLink href="/projects" isActive={isActive("/projects")}>
+          Projects
         </NavLink>
         {/* <NavLink href="/blog" isActive={isActive("/blog")}>
           Blog
         </NavLink> */}
-        <NavLink href="/gallery" isActive={isActive("/gallery")}>
-          Gallery
+        <NavLink href="/certifications" isActive={isActive("/certifications")}>
+          Certifications
         </NavLink>
       </Flex>
     </Flex>

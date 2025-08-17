@@ -4,6 +4,7 @@ import { Flex, Box } from "@chakra-ui/react";
 import { Header } from "@/components/header";
 import { NavBar } from "@/components/NavBar";
 import Script from "next/script";
+import { CommandBar, CommandBarIndicator } from "@/components/CommandBar";
 
 export const metadata = {
   title: "Govind Kurapati",
@@ -70,6 +71,8 @@ const RootLayout = ({ children }) => {
       </head>
       <body>
         <Provider>
+          <CommandBar />
+          <CommandBarIndicator />
           <Flex
             w="full"
             alignItems="stretch"

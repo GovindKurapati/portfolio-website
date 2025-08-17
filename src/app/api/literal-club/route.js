@@ -34,7 +34,6 @@ export async function GET() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // If needed, add auth headers like:
         Authorization: `Bearer ${LITERAL_CLUB_TOKEN}`,
       },
       body: JSON.stringify(graphqlQuery),
@@ -53,8 +52,6 @@ export async function GET() {
     }
 
     const firstReadingState = readingStates[0];
-
-    console.log("First Reading State:", firstReadingState);
 
     return new Response(
       JSON.stringify({
