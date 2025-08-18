@@ -3,12 +3,9 @@ import { KBarProvider, KBarPortal, KBarPositioner, KBarAnimator, KBarSearch, KBa
 import { forwardRef, useEffect } from 'react';
 import {
     Box,
-    Input,
     Text,
     Flex,
     Kbd,
-    Button,
-    useDisclosure
 } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
 import {
@@ -104,10 +101,10 @@ export const CommandBar = () => {
                 <KBarPositioner style={{ backdropFilter: 'blur(2px)' }}>
                     <KBarAnimator
                         as={Box}
-                        bg={useColorModeValue('#1a1c1e', '#1a1c1e')}
+                        bg="secondary"
                         maxW="600px"
                         w="100%"
-                        color={useColorModeValue('gray.900', 'white')}
+                        color="title.100"
                         borderRadius="8px"
                         overflow="hidden"
                         backdropFilter="saturate(110%) blur(8px)"
@@ -134,7 +131,7 @@ export const CommandBar = () => {
                             minW={{ base: "280px", md: "200px" }}
                             overflow="hidden"
                             backdropFilter="saturate(300%) blur(25px)"
-                            bg={useColorModeValue('rgba(255, 255, 255, 0.95)', 'rgba(16, 20, 27, 0.95)')}
+                            bg="secondary"
                         >
                             <Search placeholder="Type a command or search…" />
                             <RenderResults />
@@ -180,7 +177,7 @@ export const CommandBarIndicator = () => {
             position="fixed"
             bottom={4}
             right={4}
-            bg={bgColor}
+            bg="secondary"
             border="1px solid"
             borderColor={borderColor}
             borderRadius="md"
@@ -218,37 +215,25 @@ function RenderResults() {
 }
 
 const ResultItem = forwardRef(({ action, active }, ref) => {
-    const bgColor = useColorModeValue(
-        active ? 'blue.50' : 'transparent',
-        active ? 'blue.900' : 'transparent'
-    );
-    const textColor = useColorModeValue(
-        active ? 'blue.600' : 'gray.700',
-        active ? 'blue.200' : 'gray.200'
-    );
-    const iconColor = useColorModeValue(
-        active ? 'blue.500' : 'gray.500',
-        active ? 'blue.300' : 'gray.400'
-    );
 
     return (
         <Box
             ref={ref}
             px={4}
             py={3}
-            bg={bgColor}
+            bg="secondary"
             display="flex"
             alignItems="center"
             justifyContent="space-between"
             cursor="pointer"
-            color={textColor}
+            color="title.100"
             _hover={{
-                bg: useColorModeValue('gray.50', 'gray.700')
+                bg: "primary"
             }}
             backdropFilter="saturate(100%) blur(25px)"
         >
             <Flex gap={3} alignItems="center">
-                <Box color={iconColor}>
+                <Box color="title.100">
                     {action.icon && action.icon}
                 </Box>
                 <Text fontSize="sm" fontWeight="medium">
@@ -271,7 +256,6 @@ const ResultItem = forwardRef(({ action, active }, ref) => {
 ResultItem.displayName = 'ResultItem';
 
 const GroupName = ({ children }) => {
-    const bgColor = useColorModeValue('gray.100', 'gray.700');
     const textColor = useColorModeValue('gray.600', 'gray.400');
 
     return (
@@ -284,7 +268,7 @@ const GroupName = ({ children }) => {
             letterSpacing="wider"
             color={textColor}
             backdropFilter="saturate(100%) blur(25px)"
-            bg={useColorModeValue('rgba(255, 255, 255, 0.95)', 'rgba(16, 20, 27, 0.95)')}
+            bg="secondary"
             w={"100%"}
         >
             {children}
@@ -293,14 +277,11 @@ const GroupName = ({ children }) => {
 };
 
 const Search = ({ placeholder }) => {
-    const borderColor = useColorModeValue('gray.200', 'gray.600');
-    const bgColor = useColorModeValue('white', 'gray.800');
-    const textColor = useColorModeValue('gray.900', 'white');
-    const iconColor = useColorModeValue('gray.400', 'gray.500');
+
 
     return (
         <Flex alignItems="center" w={"100%"} h={"100%"} px={4} py={3} borderBottom="1px solid" borderColor={useColorModeValue('gray.200', 'gray.800')} backdropFilter="saturate(100%) blur(25px)">
-            <Box color={iconColor} mr={3}>
+            <Box color="title.100" mr={3}>
                 <FiSearch size={16} />
             </Box>
             <Box
@@ -311,7 +292,7 @@ const Search = ({ placeholder }) => {
                 outline="none"
                 border="none"
                 bg="transparent"
-                color={textColor}
+                color="title.100"
 
                 _placeholder={{
                     color: useColorModeValue('gray.400', 'gray.500')
