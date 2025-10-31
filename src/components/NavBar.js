@@ -8,8 +8,8 @@ export const NavBar = () => {
   const navItems = [
     { path: "/", label: "About" },
     { path: "/resume", label: "Resume" },
-    { path: "/portfolio", label: "Portfolio" },
-    { path: "/gallery", label: "Gallery" },
+    { path: "/projects", label: "Projects" },
+    { path: "/certifications", label: "Certifications" },
   ];
 
   return (
@@ -17,12 +17,12 @@ export const NavBar = () => {
       position={"fixed"}
       bottom={0}
       left={0}
+      zIndex={1000}
       gap={4}
       padding={4}
       justifyContent={"space-around"}
       alignItems={"center"}
       w="100%"
-      // zIndex={10}
       bg="secondary"
       backdropFilter="blur(10px)"
       border="1px solid var(--jet)"

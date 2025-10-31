@@ -82,6 +82,16 @@ export const ExperienceItem = ({
 export default function Resume() {
   const EXPERIENCE_DATA = [
     {
+      title: "Full Stack Developer Intern",
+      organisation: "Find Me LLC",
+      timePeriod: "Aug 2025 - Present",
+      location: "Remote, USA",
+      activites: [
+        "Led a backend team of 8 engineers, delegating and mentoring on tasks for key features including portfolio creation, face scanning, and user management, ensuring timely delivery and scalability.",
+        "Dockerized and deployed the full-stack application on Azure Container Apps, while establishing coding standards and best practices across the team to maintain code quality and consistency.",
+      ],
+    },
+    {
       title: "Web Developer",
       organisation: "ACM, Illinois Tech",
       timePeriod: "Nov 2024 - Present",
@@ -153,7 +163,7 @@ export default function Resume() {
       location: "Chicago, USA",
       activites: [
         "GPA: 3.83/4.0",
-        "Relevant Coursework: Algorithms, Database Systems, Machine Learning, Software Engineering, Computer Networks.",
+        "Relevant Coursework: Algorithms, Database Organization, Machine Learning, Big Data Technologies, Computer Networks, Mobile Application Development.",
       ],
     },
   ];
@@ -173,6 +183,7 @@ export default function Resume() {
           <Heading
             size={"4xl"}
             mb="30px"
+            width="fit-content"
             _after={{
               content: '""',
               position: "absolute",

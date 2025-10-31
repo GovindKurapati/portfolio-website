@@ -41,7 +41,7 @@ export const Header = () => {
       align="center"
       position={"absolute"}
       as="nav"
-      // zIndex={10}
+      zIndex={1000}
       bg="secondary"
       backdropFilter="blur(10px)"
       border={"1px solid"}

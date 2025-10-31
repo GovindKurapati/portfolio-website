@@ -75,6 +75,7 @@ export default function Projects() {
       <Heading
         size={"4xl"}
         mb="30px"
+        width="fit-content"
         _after={{
           content: '""',
           position: "absolute",

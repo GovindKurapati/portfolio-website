@@ -13,13 +13,19 @@ import { Image } from "@chakra-ui/react";
 import { ContactInfo } from "./contact-info";
 import { LuFile } from "react-icons/lu";
 import { FaChevronDown } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const ProfileSideBar = () => {
-  const defaultState = useBreakpointValue({ base: true, xl: true });
+  const defaultState = useBreakpointValue({ base: false, md: true });
 
   const [toggleContactInfoSection, setToggleContactInfoSection] =
-    useState(defaultState);
+    useState(defaultState ?? false);
+
+  useEffect(() => {
+    if (typeof defaultState === "boolean") {
+      setToggleContactInfoSection(defaultState);
+    }
+  }, [defaultState]);
 
   const toggleContactInfo = () => {
     setToggleContactInfoSection(!toggleContactInfoSection);
