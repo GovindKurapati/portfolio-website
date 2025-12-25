@@ -9,6 +9,7 @@ import {
   Icon,
   List,
   useToken,
+  Link,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { MdOutlineWorkOutline } from "react-icons/md";
@@ -20,6 +21,7 @@ export const ExperienceItem = ({
   position,
   location,
   date,
+  website,
   children,
   _notLast,
 }) => {
@@ -50,9 +52,23 @@ export const ExperienceItem = ({
           </Text>
         </Flex>
         <Flex align="center" gap={"10px"}>
-          <Text color={"tertiary"} fontSize="lg" m="0">
-            {company}
-          </Text>
+          {website ? (
+            <Link
+              href={website}
+              target="_blank"
+              isExternal
+              color={"tertiary"}
+              fontSize="lg"
+              m="0"
+              _hover={{ textDecoration: "underline" }}
+            >
+              {company}
+            </Link>
+          ) : (
+            <Text color={"tertiary"} fontSize="lg" m="0">
+              {company}
+            </Text>
+          )}
           {/* <Box color="secondary">
             <FaCircle size={"8px"} />
           </Box> */}
@@ -79,12 +95,13 @@ export const ExperienceItem = ({
   );
 };
 
-export default function Resume() {
+export default function Experience() {
   const EXPERIENCE_DATA = [
     {
       title: "Full Stack Developer Intern",
       organisation: "Find Me LLC",
-      timePeriod: "Aug 2025 - Present",
+      website: "https://fyndme.co/",
+      timePeriod: "Aug 2025 - Nov 2025",
       location: "Remote, USA",
       activites: [
         "Led a backend team of 8 engineers, delegating and mentoring on tasks for key features including portfolio creation, face scanning, and user management, ensuring timely delivery and scalability.",
@@ -92,8 +109,9 @@ export default function Resume() {
       ],
     },
     {
-      title: "Web Developer",
+      title: "Web Developer (Student Organization)",
       organisation: "ACM, Illinois Tech",
+      website: "https://acmillinoistech.org/",
       timePeriod: "Nov 2024 - Present",
       location: "Chicago, USA",
       activites: [
@@ -105,6 +123,7 @@ export default function Resume() {
     {
       title: "Senior Software Engineer",
       organisation: "Presidio",
+      website: "https://presidio.com",
       timePeriod: "Sep 2023 - Jun 2024",
       location: "Chennai, India",
       activites: [
@@ -118,6 +137,7 @@ export default function Resume() {
     {
       title: "Software Engineer",
       organisation: "Presidio",
+      website: "https://presidio.com",
       timePeriod: "JUL 2021 - sep 2023",
       location: "Chennai, India",
       activites: [
@@ -131,6 +151,7 @@ export default function Resume() {
     {
       title: "Software Engineer Trainee",
       organisation: "Presidio",
+      website: "https://presidio.com",
       timePeriod: "SEP 2020 - JUN 2021",
       location: "Chennai, India",
       activites: [
@@ -146,6 +167,7 @@ export default function Resume() {
     {
       title: "Associate Programmer",
       organisation: "TEDx Illinois Tech",
+      website: "https://www.ted.com/tedx/events/59836",
       timePeriod: "Oct 2024 - Nov 2024",
       location: "Chicago, USA",
       activites: [
@@ -159,10 +181,11 @@ export default function Resume() {
     {
       title: "Master of Computer Science",
       organisation: "Illinois Institute of Technology",
+      website: "https://www.iit.edu",
       timePeriod: "Aug 2024 - May 2026",
       location: "Chicago, USA",
       activites: [
-        "GPA: 3.83/4.0",
+        "GPA: 3.88/4.0",
         "Relevant Coursework: Algorithms, Database Organization, Machine Learning, Big Data Technologies, Computer Networks, Mobile Application Development.",
       ],
     },
@@ -195,7 +218,7 @@ export default function Resume() {
               borderRadius: "3px",
             }}
           >
-            Resume
+            Experience
           </Heading>
         </motion.div>
 

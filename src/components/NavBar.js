@@ -7,7 +7,7 @@ export const NavBar = () => {
   const pathname = usePathname();
   const navItems = [
     { path: "/", label: "About" },
-    { path: "/resume", label: "Resume" },
+    { path: "/experience", label: "Experience" },
     { path: "/projects", label: "Projects" },
     { path: "/certifications", label: "Certifications" },
   ];

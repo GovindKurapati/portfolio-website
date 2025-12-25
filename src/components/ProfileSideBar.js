@@ -118,7 +118,7 @@ export const ProfileSideBar = () => {
             <Text>Full Stack Developer</Text>
           </Flex>
           <Link
-            href="https://drive.google.com/file/d/1cwBvjeXHVHegDxyZLTyV_f4zuqJFBbZX/view?usp=sharing"
+            href="/Govind_Kurapati_Resume.pdf"
             target="_blank"
           >
             <Button

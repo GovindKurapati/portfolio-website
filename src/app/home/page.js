@@ -7,7 +7,6 @@ import {
   Box,
   Link,
   Image,
-  Grid,
 } from "@chakra-ui/react";
 import {
   SiTypescript,
@@ -38,8 +37,7 @@ import {
   FaJava,
   FaPlay,
 } from "react-icons/fa";
-import RecentlyPlayed from "@/components/RecentlyPlayed";
-import RecentlyRead from "@/components/RecentlyRead";
+import FeaturedProjects from "@/components/FeaturedProjects";
 
 // Utility function to lighten colors
 const lightenColor = (color, amount = 0.55) => {
@@ -257,18 +255,10 @@ export async function Home() {
         ))}
       </Flex>
 
-      <Heading size={"2xl"} mt={"6"} fontWeight={600}>
-        Activity
+      <Heading size={"2xl"} mt={"8"} fontWeight={600}>
+        Featured Projects
       </Heading>
-      <Text my={"2"}>What I’ve recently listened and read.</Text>
-      <Grid
-        gridTemplateColumns={{ base: "1fr", md: "1fr 1fr" }}
-        gap={"20px"}
-        my={"2"}
-      >
-        <RecentlyRead />
-        <RecentlyPlayed />
-      </Grid>
+      <FeaturedProjects />
     </Flex>
   );
 }

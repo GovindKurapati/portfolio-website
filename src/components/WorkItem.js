@@ -1,4 +1,4 @@
-import { ExperienceItem } from "@/app/(routes)/resume/page";
+import { ExperienceItem } from "@/app/(routes)/experience/page";
 import { Flex, Heading, VStack, Text, Icon, List } from "@chakra-ui/react";
 import { FaCircle } from "react-icons/fa";
 
@@ -54,6 +54,7 @@ export const WorkItem = ({ title, icon, data }) => {
                 position={e.title}
                 location={e.location}
                 date={e.timePeriod}
+                website={e.website}
                 key={index}
                 _notLast={{
                   _before: {

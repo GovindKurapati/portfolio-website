@@ -44,12 +44,12 @@ export const CommandBar = () => {
             section: "Go to",
         },
         {
-            id: "resume",
-            name: "Resume",
+            id: "experience",
+            name: "Experience",
             shortcut: ["r"],
             keywords: "cv experience skills",
             icon: <FiFileText size={16} />,
-            perform: () => router.push("/resume"),
+            perform: () => router.push("/experience"),
             section: "Go to",
         },
         {

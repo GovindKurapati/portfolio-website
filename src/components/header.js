@@ -59,8 +59,8 @@ export const Header = () => {
         <NavLink href="/" isActive={isActive("/")}>
           About
         </NavLink>
-        <NavLink href="/resume" isActive={isActive("/resume")}>
-          Resume
+        <NavLink href="/experience" isActive={isActive("/experience")}>
+          Experience
         </NavLink>
         <NavLink href="/projects" isActive={isActive("/projects")}>
           Projects
