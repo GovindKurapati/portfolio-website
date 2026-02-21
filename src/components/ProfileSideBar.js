@@ -94,7 +94,7 @@ export const ProfileSideBar = () => {
           justifyContent={"center"}
         >
           <Image
-            src="/profile.png"
+            src="/Profile.png"
             width={{ base: "100px", sm: "150px" }}
             height={{ base: "100px", sm: "150px" }}
             borderRadius="20px"

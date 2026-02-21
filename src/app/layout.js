@@ -30,7 +30,7 @@ export const metadata = {
       "Portfolio website of Govind Kurapati - Software Engineer and Developer",
     images: [
       {
-        url: "/profile.png",
+        url: "/Profile.png",
         width: 1200,
         height: 630,
         alt: "Govind Kurapati - Software Engineer",
