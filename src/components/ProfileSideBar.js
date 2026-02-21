@@ -18,8 +18,9 @@ import { useState, useEffect } from "react";
 export const ProfileSideBar = () => {
   const defaultState = useBreakpointValue({ base: false, md: true });
 
-  const [toggleContactInfoSection, setToggleContactInfoSection] =
-    useState(defaultState ?? false);
+  const [toggleContactInfoSection, setToggleContactInfoSection] = useState(
+    defaultState ?? false,
+  );
 
   useEffect(() => {
     if (typeof defaultState === "boolean") {
@@ -35,8 +36,9 @@ export const ProfileSideBar = () => {
       w={{ base: "90%", xl: "27%" }}
       backgroundColor={"primary"}
       direction={"column"}
-      position={{ base: "relative", md: "sticky" }}
+      position={{ base: "relative", xl: "sticky" }}
       top={"60px"}
+      alignSelf={{ base: "auto", xl: "flex-start" }}
       maxHeight={"max-content"}
       alignItems={{ base: "flex-start", xl: "center" }}
       padding={"60px 30px 30px 30px"}
@@ -92,7 +94,7 @@ export const ProfileSideBar = () => {
           justifyContent={"center"}
         >
           <Image
-            src="/profile-pic.jpg"
+            src="/profile.png"
             width={{ base: "100px", sm: "150px" }}
             height={{ base: "100px", sm: "150px" }}
             borderRadius="20px"
@@ -117,10 +119,7 @@ export const ProfileSideBar = () => {
           >
             <Text>Full Stack Developer</Text>
           </Flex>
-          <Link
-            href="/Govind_Kurapati_Resume.pdf"
-            target="_blank"
-          >
+          <Link href="/Govind_Kurapati_Resume.pdf" target="_blank">
             <Button
               boxShadow="0px 4px 20px rgba(0, 0, 0, 0.25)"
               position="relative"

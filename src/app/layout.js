@@ -1,6 +1,6 @@
 import { Provider } from "@/components/provider";
 import { ProfileSideBar } from "@/components/ProfileSideBar";
-import { Flex, Box } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { Header } from "@/components/header";
 import { NavBar } from "@/components/NavBar";
 import Script from "next/script";
@@ -30,7 +30,7 @@ export const metadata = {
       "Portfolio website of Govind Kurapati - Software Engineer and Developer",
     images: [
       {
-        url: "/profile-pic.jpg",
+        url: "/profile.png",
         width: 1200,
         height: 630,
         alt: "Govind Kurapati - Software Engineer",
@@ -75,7 +75,7 @@ const RootLayout = ({ children }) => {
           <CommandBarIndicator />
           <Flex
             w="full"
-            alignItems="stretch"
+            alignItems="flex-start"
             justifyContent={"center"}
             gap="6"
             position={"relative"}

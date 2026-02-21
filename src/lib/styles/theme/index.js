@@ -70,11 +70,11 @@ const customTheme = createSystem(defaultConfig, {
     },
     html: {
       color: "title.100",
-      overflowX: "hidden",
+      overflowX: "clip",
       backgroundColor: "backgroundColor",
     },
     body: {
-      overflowX: "hidden",
+      overflowX: "clip",
     },
   },
 });
