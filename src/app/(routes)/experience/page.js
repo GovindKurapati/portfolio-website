@@ -185,7 +185,7 @@ export default function Experience() {
       timePeriod: "Aug 2024 - May 2026",
       location: "Chicago, USA",
       activites: [
-        "GPA: 3.88/4.0",
+        "GPA: 3.9/4.0",
         "Relevant Coursework: Algorithms, Database Organization, Machine Learning, Big Data Technologies, Computer Networks, Mobile Application Development.",
       ],
     },

@@ -7,6 +7,7 @@ import CustomModal from "@/components/CustomModal";
 import { motion } from "framer-motion";
 export default function Certifications() {
   const categories = [
+    { id: "0", src: "/gallery/google-ai.png", category: "Certifications" },
     { id: "1", src: "/gallery/aws-saa-cert.jpg", category: "Certifications" },
     {
       id: "2",
