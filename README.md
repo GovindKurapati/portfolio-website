@@ -1,34 +1,39 @@
-## Getting Started
+# Govind Kurapati | Portfolio
 
-First, run the development server:
+A modern, responsive portfolio showcasing my experience, projects, technical
+skills, education, and certifications as a software engineer and full-stack
+developer.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[View the live portfolio](https://govind-kurapati.com)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Preview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+[![Govind Kurapati portfolio preview](public/personal-website.png)](https://govind-kurapati.com)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Highlights
 
-## Learn More
+- About page with a visual overview of my technical stack
+- Professional experience, education, and volunteer work timeline
+- Project gallery with technology details and external links
+- Certification gallery with expanded previews
+- Responsive layouts for desktop and mobile devices
+- Light and dark color modes
+- Keyboard-accessible command palette with `Ctrl/Command + K`
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Category     | Technologies                          |
+| ------------ | ------------------------------------- |
+| Framework    | Next.js 15, React 19                  |
+| UI           | Chakra UI, Emotion, React Icons       |
+| Animation    | Framer Motion                         |
+| Navigation   | KBar command palette                  |
+| Theming      | Next Themes                           |
+| Analytics    | Umami                                 |
+| Integrations | Spotify API, Literal.club GraphQL API |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Connect
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [LinkedIn](https://linkedin.com/in/govind-kurapati)
+- [GitHub](https://github.com/GovindKurapati)
+- [Email](mailto:kgovindrarg@gmail.com)
