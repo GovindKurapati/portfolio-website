@@ -68,7 +68,7 @@ export const WorkItem = ({ title, icon, data }) => {
                   },
                 }}
               >
-                <VStack align="stretch" spacing={3}>
+                {/* <VStack align="stretch" spacing={3}>
                   {e.activites.length > 0 && (
                     <List.Root spacing={3} display={"flex"} gap={"10px"}>
                       {e.activites.map((activity, index) => {
@@ -89,7 +89,7 @@ export const WorkItem = ({ title, icon, data }) => {
                       })}
                     </List.Root>
                   )}
-                </VStack>
+                </VStack> */}
               </ExperienceItem>
             );
           })}
